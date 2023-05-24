@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    #region Variable
     private Rigidbody rb;
     [SerializeField] private float upThrusters;
     [SerializeField] private float rotateThrusters;
-
+    [SerializeField] private AudioSource thrusterAudio;
+    #endregion
     private void Start()
     {
+       thrusterAudio = GetComponent<AudioSource>();
        rb = GetComponent<Rigidbody>();
     }
     private void Update()
@@ -22,7 +25,15 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up * upThrusters * Time.deltaTime); 
+            rb.AddRelativeForce(Vector3.up * upThrusters * Time.deltaTime);
+            if (!thrusterAudio.isPlaying)
+            {
+                thrusterAudio.Play();
+            }
+        }
+        else
+        {
+            thrusterAudio.Pause();
         }
     }
     private void ProcessRotation()
