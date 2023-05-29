@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1619172921, guid: 56c793968d382b146b281fa0283cdfd7, type: 3}
-      propertyPath: deadWait
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 781752855317835491, guid: 56c793968d382b146b281fa0283cdfd7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -182,16 +178,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
-    - target: {fileID: 5122996942148885491, guid: 56c793968d382b146b281fa0283cdfd7, type: 3}
-      propertyPath: deatWait
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5122996942148885491, guid: 56c793968d382b146b281fa0283cdfd7, type: 3}
-      propertyPath: waitTime
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1619172921, guid: 56c793968d382b146b281fa0283cdfd7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56c793968d382b146b281fa0283cdfd7, type: 3}
 --- !u!1 &1026879959
 GameObject:
@@ -322,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 6435003617101556844, guid: cfc901509aded7e41adb11d7df981ca1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7926b1ba2ab836043b53eb2ed94da3ad, type: 2}
+      objectReference: {fileID: 2100000, guid: 890effba3d9e61241abdf2a3c38b3505, type: 2}
     - target: {fileID: 6435003617101556846, guid: cfc901509aded7e41adb11d7df981ca1, type: 3}
       propertyPath: m_Name
       value: Obstacle

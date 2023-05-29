@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float upThrusters;
     [SerializeField] private float rotateThrusters;
     [SerializeField] private AudioSource thrusterAudio;
+    [SerializeField] private AudioClip mainEngine;
     #endregion
     private void Start()
     {
@@ -28,7 +29,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * upThrusters * Time.deltaTime);
             if (!thrusterAudio.isPlaying)
             {
-                thrusterAudio.Play();
+                thrusterAudio.PlayOneShot(mainEngine);
             }
         }
         else
