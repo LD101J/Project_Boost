@@ -12,10 +12,28 @@ public class Collision_Handler : MonoBehaviour
     [SerializeField] private ParticleSystem collisionEffect;
     [SerializeField] private AudioSource collisionSource;
     [SerializeField] private bool isTransitioning = false;
-     
+    [SerializeField] private bool collisionDisable = false;
+
+    private void Update()
+    {
+        Debug_Keys();
+    }
+
+    private void Debug_Keys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            NextScene();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            collisionDisable = !collisionDisable;
+        }
+    }
+
     private void OnCollisionEnter(Collision other)
     {
-        if(isTransitioning)
+        if(isTransitioning || collisionDisable)
         {
             return;
         }
